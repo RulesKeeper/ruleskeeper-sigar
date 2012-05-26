@@ -1,0 +1,1 @@
+mvn breakonversionclash:clash-detection -Dhalt=FAIL -Ddepth=SHALLOW

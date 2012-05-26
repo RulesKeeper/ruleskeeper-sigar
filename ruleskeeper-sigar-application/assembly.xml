@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+ <id>distribution</id>
+ <formats>
+  <format>zip</format>
+ </formats>
+ <includeBaseDirectory>true</includeBaseDirectory>
+ <dependencySets>
+  <!-- Libraries -->
+  <dependencySet>
+   <outputDirectory>lib</outputDirectory>
+   <useTransitiveFiltering>true</useTransitiveFiltering>
+   <excludes>
+    <exclude>tanukisoft:wrapper:*</exclude>
+   </excludes>
+  </dependencySet>
+  <!-- Libraries Wrapper -->
+  <dependencySet>
+   <outputDirectory>lib/wrapper</outputDirectory>
+   <useTransitiveFiltering>false</useTransitiveFiltering>
+   <includes>
+    <include>org.ruleskeeper:ruleskeeper-sigar-application:*</include>
+    <include>tanukisoft:wrapper:*</include>
+   </includes>
+  </dependencySet>
+  <!-- Java Service Wrapper -->
+  <dependencySet>
+   <outputDirectory>bin</outputDirectory>
+   <includes>
+    <include>org.sonatype.jsw-binaries:jsw-binaries</include>
+   </includes>
+   <unpack>true</unpack>
+   <scope>provided</scope>
+   <unpackOptions>
+    <excludes>
+     <exclude>**/app</exclude>
+     <exclude>**/*.bat</exclude>
+     <exclude>**/sample*/**</exclude>
+    </excludes>
+   </unpackOptions>
+   <fileMode>0755</fileMode>
+  </dependencySet>
+ </dependencySets>
+
+ <fileSets>
+  <!-- Windows Scripts -->
+  <fileSet>
+   <directory>src/main/assembly</directory>
+   <outputDirectory>/</outputDirectory>
+   <includes>
+    <include>**/*.bat</include>
+    <include>**/*.cmd</include>
+   </includes>
+   <lineEnding>dos</lineEnding>
+   <fileMode>0644</fileMode>
+  </fileSet>
+  <!-- Linux Scripts -->
+  <fileSet>
+   <directory>src/main/assembly</directory>
+   <outputDirectory>/</outputDirectory>
+   <includes>
+    <include>**/*.sh</include>
+    <include>**/ant</include>
+    <include>**/antRun</include>
+   </includes>
+   <lineEnding>unix</lineEnding>
+   <fileMode>0755</fileMode>
+  </fileSet>
+  <!-- Other Stuff -->
+  <fileSet>
+   <directory>src/main/assembly</directory>
+   <outputDirectory>/</outputDirectory>
+   <excludes>
+    <exclude>**/*.bat</exclude>
+    <exclude>**/*.cmd</exclude>
+    <exclude>**/*.sh</exclude>
+    <exclude>**/ant</exclude>
+    <exclude>**/antRun</exclude>
+   </excludes>
+   <fileMode>0644</fileMode>
+  </fileSet>
+  <!-- Empty Directories -->
+  <fileSet>
+   <directory>src/main/assembly</directory>
+   <outputDirectory>logs/</outputDirectory>
+   <excludes>
+    <exclude>**/*</exclude>
+   </excludes>
+  </fileSet>
+ </fileSets>
+</assembly>

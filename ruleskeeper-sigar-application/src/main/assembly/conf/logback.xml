@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration debug="false">
+
+  <appender name="RK_SIGAR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>../../logs/ruleskeeper-sigar.log</File>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>../../logs/%d{yyyy-MM-dd}.ruleskeeper-sigar.log.gz</fileNamePattern>
+      <!-- keep 30 days' worth of history -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>      
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>
+        %d{yyyy.MM.dd HH:mm:ss} %-5level %logger{20} %X %msg%n
+      </pattern>
+    </layout>
+  </appender>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </layout>
+  </appender>
+
+  <logger name="org.ruleskeeper.INFO">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="ch.qos.logback">
+    <level value="WARN" />
+  </logger>
+
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="RK_SIGAR_FILE" />
+  </root>
+
+</configuration>
