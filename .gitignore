@@ -3,3 +3,7 @@
 /ruleskeeper-sigar-application/target
 /ruleskeeper-sigar-application/.classpath
 /ruleskeeper-sigar-application/.project
+/ruleskeeper-protobuf/.settings
+/ruleskeeper-protobuf/target
+/ruleskeeper-protobuf/.classpath
+/ruleskeeper-protobuf/.project
