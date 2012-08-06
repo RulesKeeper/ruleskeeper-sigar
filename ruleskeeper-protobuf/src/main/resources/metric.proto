@@ -4,21 +4,31 @@ option java_package = "org.ruleskeeper";
 option java_outer_classname = "MetricProtoBuf";
 
 message Metric {
-  optional string dataProvider = 1;
-  required string key = 2;
-  required string value = 3;
-  required long eventDate = 4;
+  required string dataProvider = 1;
+  repeated string context = 2;
+  required string shortName = 3;
+  required string technicalKey = 4;
+  required string hierarchyKey = 5;
+  required string value = 6;
+  required string eventDate = 7;
 
   enum UnitType {
     COUNTER = 0;
-    PERCENT = 1;
-    MB = 2;
-    STRING = 3;
+    STRING = 1;
+    DATE = 2;
+    SPEED = 3;
     MILLISECONDS = 4;
     SECONDS = 5;
+    MINUTES = 6;
+    BYTES = 7;
+    KILOBYTES = 8;
+    MEGABYTES = 9;
+    GIGABYTES = 10;
+    PERCENT = 11;   
   }
 
-  required UnitType unit = 5 [default = STRING];
-  repeated string context = 6;
+  required UnitType unit = 8 [default = STRING];
+	optional string defaultWarningThreshold = 9;
+  optional string defaultErrorThreshold = 10;
 
 }

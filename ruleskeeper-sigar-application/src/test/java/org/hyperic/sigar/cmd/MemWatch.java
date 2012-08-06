@@ -16,8 +16,8 @@
 
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.ProcMem;
+import org.hyperic.sigar.Sigar;
 
 /**
  * Watch for changes in program memory usage.

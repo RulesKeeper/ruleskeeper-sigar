@@ -19,38 +19,13 @@
  */
 package org.ruleskeeper.app;
 
-import org.quartz.SchedulerException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+public final class RulesKeeperSigarConstants {
 
-public class StartSigar {
+	private RulesKeeperSigarConstants() {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(StartSigar.class);
-
-	public StartSigar() {
 	}
 
-	public void scheduleConfigurationRefreshJob() {
-		RulesKeeperSigarScheduler.INSTANCE.scheduleConfigurationRefreshJob();
-	}
-
-	public void scheduleDataPickerJob() {
-		RulesKeeperSigarScheduler.INSTANCE.scheduleDataPickerJob();
-	}
-
-	public void start() {
-		try {
-			RulesKeeperSigarScheduler.INSTANCE.start();
-		} catch (SchedulerException e) {
-			LOGGER.error(e.getMessage());
-		}
-	}
-
-	public static void main(String[] args) {
-		StartSigar p = new StartSigar();
-		p.scheduleConfigurationRefreshJob();
-		p.start();
-		p.scheduleDataPickerJob();
-	}
+	public static final int MS_TO_SECOND_MULTIPLE = 1000;
+	public static final Double PERCENT_MULTIPLE = 100.0D;
 
 }

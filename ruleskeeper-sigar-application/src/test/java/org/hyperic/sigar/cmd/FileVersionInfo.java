@@ -19,10 +19,10 @@ package org.hyperic.sigar.cmd;
 import java.io.File;
 import java.util.Iterator;
 import java.util.Map;
+
 import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.ProcExe;
-import org.hyperic.sigar.win32.Win32;
 import org.hyperic.sigar.win32.FileVersion;
+import org.hyperic.sigar.win32.Win32;
 
 /**
  * Display process file information.

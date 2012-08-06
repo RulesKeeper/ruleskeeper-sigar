@@ -17,29 +17,25 @@
 package org.hyperic.sigar.cmd;
 
 import java.io.PrintStream;
-
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
 import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarProxy;
 import org.hyperic.sigar.SigarException;
-
+import org.hyperic.sigar.SigarProxy;
 import org.hyperic.sigar.pager.PageControl;
 import org.hyperic.sigar.pager.PageFetchException;
 import org.hyperic.sigar.pager.StaticPageFetcher;
-
-import org.hyperic.sigar.util.GetlineCompleter;
-import org.hyperic.sigar.util.PrintfFormat;
-
 import org.hyperic.sigar.shell.CollectionCompleter;
 import org.hyperic.sigar.shell.ProcessQueryCompleter;
 import org.hyperic.sigar.shell.ShellCommandBase;
 import org.hyperic.sigar.shell.ShellCommandExecException;
 import org.hyperic.sigar.shell.ShellCommandUsageException;
+import org.hyperic.sigar.util.GetlineCompleter;
+import org.hyperic.sigar.util.PrintfFormat;
 
 public abstract class SigarCommandBase
     extends ShellCommandBase

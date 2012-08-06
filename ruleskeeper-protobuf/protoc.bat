@@ -1,1 +1,0 @@
-D:\02_SOFTWARES\protoc-2.4.1-win32\protoc -I=D:\01_my_data\01_projects\ruleskeeper-sigar\ruleskeeper-protobuf\src\main\resources --java_out=D:\01_my_data\01_projects\ruleskeeper-sigar\ruleskeeper-protobuf\src\main\java D:\01_my_data\01_projects\ruleskeeper-sigar\ruleskeeper-protobuf\src\main\resources/metric.proto

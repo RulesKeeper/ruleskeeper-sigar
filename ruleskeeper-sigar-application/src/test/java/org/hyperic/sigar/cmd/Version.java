@@ -25,7 +25,6 @@ import org.hyperic.sigar.OperatingSystem;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.SigarLoader;
-
 import org.hyperic.sigar.win32.LocaleInfo;
 
 /**

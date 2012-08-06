@@ -16,11 +16,11 @@
 
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.CpuPerc;
 import org.hyperic.sigar.MultiProcCpu;
 import org.hyperic.sigar.ProcMem;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
 
 /**
  * Show multi process status.

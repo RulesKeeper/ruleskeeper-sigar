@@ -18,13 +18,13 @@ package org.hyperic.sigar.cmd;
 
 import java.util.List;
 
+import org.hyperic.sigar.CpuPerc;
+import org.hyperic.sigar.ProcCpu;
+import org.hyperic.sigar.ProcStat;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.SigarProxy;
-import org.hyperic.sigar.CpuPerc;
 import org.hyperic.sigar.SigarProxyCache;
-import org.hyperic.sigar.ProcCpu;
-import org.hyperic.sigar.ProcStat;
 
 /**
  * Display system resource utilization summaries and process information.

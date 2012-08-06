@@ -16,17 +16,17 @@
 
 package org.hyperic.sigar.cmd;
 
-import java.io.IOException;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.FileInfo;
 import org.hyperic.sigar.FileTail;
 import org.hyperic.sigar.FileWatcherThread;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
 
 /**
  * Display the last part of files to the standard output.

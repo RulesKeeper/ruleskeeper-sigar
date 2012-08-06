@@ -9,7 +9,7 @@
  <groupId>org.ruleskeeper</groupId>
  <artifactId>ruleskeeper-protobuf</artifactId>
  <packaging>jar</packaging>
- <name>RulesKeeper :: SIGAR :: Protocol Buffer</name>
+ <name>RulesKeeper :: Protocol Buffer</name>
  <description>RulesKeeper Protocol Buffer Data Format for Serializing Structured Data</description>
 
  <dependencies>
@@ -54,6 +54,34 @@
    <scope>test</scope>
   </dependency>
  </dependencies>
+
+ <build>
+  <plugins>
+   <plugin>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <executions>
+     <execution>
+      <id>generate-sources</id>
+      <phase>generate-sources</phase>
+      <configuration>
+       <tasks>
+        <mkdir dir="src/gen/java" />
+        <exec executable="./protoc">
+         <arg value="--java_out=src/gen/java" />
+         <arg value="--proto_path=./src" />
+         <arg value="./src/main/resources/metric.proto" />
+        </exec>
+       </tasks>
+       <sourceRoot>src/gen/java</sourceRoot>
+      </configuration>
+      <goals>
+       <goal>run</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
+ </build>
 
  <profiles>
   <profile>

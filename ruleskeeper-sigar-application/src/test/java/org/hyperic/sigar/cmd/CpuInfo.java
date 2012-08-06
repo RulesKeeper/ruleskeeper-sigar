@@ -18,8 +18,8 @@ package org.hyperic.sigar.cmd;
 
 import org.hyperic.sigar.CpuPerc;
 import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarLoader;
 import org.hyperic.sigar.SigarException;
+import org.hyperic.sigar.SigarLoader;
 
 /**
  * Display cpu information for each cpu found on the system.

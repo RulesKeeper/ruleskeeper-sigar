@@ -16,8 +16,8 @@
 
 package org.hyperic.sigar.cmd;
 
-import java.util.Map;
 import java.util.Iterator;
+import java.util.Map;
 
 import org.hyperic.sigar.SigarException;
 

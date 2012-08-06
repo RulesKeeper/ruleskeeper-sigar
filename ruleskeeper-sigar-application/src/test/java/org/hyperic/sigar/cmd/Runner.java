@@ -19,16 +19,13 @@ package org.hyperic.sigar.cmd;
 
 import java.io.File;
 import java.io.FileFilter;
-
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import java.lang.reflect.Method;
-import java.lang.reflect.InvocationTargetException;
-
-import java.net.URLClassLoader;
-import java.net.URL;
 
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarLoader;

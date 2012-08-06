@@ -20,9 +20,9 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 
-import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.NetConnection;
 import org.hyperic.sigar.NetFlags;
+import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Tcp;
 
 /**

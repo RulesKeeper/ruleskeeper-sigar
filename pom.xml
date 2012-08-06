@@ -26,7 +26,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.min.version>1.6</jdk.min.version>
     
-    <logback.version>1.0.3</logback.version>
+    <logback.version>1.0.6</logback.version>
     <slf4j.version>1.6.4</slf4j.version>
     <junit.version>4.9</junit.version>
     <quartz.version>1.8.6</quartz.version>
@@ -46,7 +46,7 @@
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>1.7</version>
 				</plugin>
-				<plugin>
+        <plugin>
 					<!-- not thread safe -->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-archetype-plugin</artifactId>
@@ -163,10 +163,35 @@
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.1.1</version>
 				</plugin>
-			</plugins>
+        <plugin>        
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>1.7</version>
+				</plugin>
+      </plugins>
 		</pluginManagement>
 
 		<plugins>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>src/gen/java</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     
       <plugin>
         <groupId>com.hexapixel.maven.plugins</groupId>

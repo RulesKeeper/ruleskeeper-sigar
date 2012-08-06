@@ -19,13 +19,12 @@ package org.hyperic.sigar.cmd;
 
 import java.util.ArrayList;
 
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemMap;
 import org.hyperic.sigar.FileSystemUsage;
 import org.hyperic.sigar.NfsFileSystem;
-
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.shell.FileCompleter;
 import org.hyperic.sigar.util.GetlineCompleter;
 

@@ -15,7 +15,9 @@
  */
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.*;
+import org.hyperic.sigar.ProcState;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
 
 /*
 

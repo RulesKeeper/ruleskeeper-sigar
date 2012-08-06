@@ -17,25 +17,22 @@
 
 package org.hyperic.sigar.cmd;
 
-import java.io.IOException;
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.SigarPermissionDeniedException;
 import org.hyperic.sigar.SigarLoader;
+import org.hyperic.sigar.SigarPermissionDeniedException;
 import org.hyperic.sigar.SigarProxy;
 import org.hyperic.sigar.SigarProxyCache;
-
 import org.hyperic.sigar.ptql.ProcessFinder;
-
 import org.hyperic.sigar.shell.ShellBase;
 import org.hyperic.sigar.shell.ShellCommandExecException;
 import org.hyperic.sigar.shell.ShellCommandHandler;
 import org.hyperic.sigar.shell.ShellCommandInitException;
 import org.hyperic.sigar.shell.ShellCommandUsageException;
-
 import org.hyperic.sigar.util.Getline;
 
 /**

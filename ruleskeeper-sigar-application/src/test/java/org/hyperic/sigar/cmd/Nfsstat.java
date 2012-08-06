@@ -16,9 +16,9 @@
 
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.SigarException;
-
 import java.lang.reflect.Method;
+
+import org.hyperic.sigar.SigarException;
 
 public class Nfsstat extends SigarCommandBase {
     public Nfsstat(Shell shell) {

@@ -17,8 +17,8 @@
 package org.hyperic.sigar.cmd;
 
 import org.hyperic.sigar.Mem;
-import org.hyperic.sigar.Swap;
 import org.hyperic.sigar.SigarException;
+import org.hyperic.sigar.Swap;
 
 /**
  * Display amount of free and used memory in the system.

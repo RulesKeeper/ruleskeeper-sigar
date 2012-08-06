@@ -19,11 +19,11 @@ package org.hyperic.sigar.cmd;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
+import org.hyperic.sigar.NetFlags;
 import org.hyperic.sigar.NetInterfaceConfig;
 import org.hyperic.sigar.NetInterfaceStat;
-import org.hyperic.sigar.NetFlags;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
 
 /**
  * Display network interface configuration and metrics.

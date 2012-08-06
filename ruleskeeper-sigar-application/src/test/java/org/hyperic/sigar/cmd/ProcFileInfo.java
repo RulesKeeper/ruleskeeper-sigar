@@ -16,11 +16,11 @@
 
 package org.hyperic.sigar.cmd;
 
+import org.hyperic.sigar.ProcExe;
+import org.hyperic.sigar.ProcFd;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.SigarNotImplementedException;
 import org.hyperic.sigar.SigarPermissionDeniedException;
-import org.hyperic.sigar.ProcFd;
-import org.hyperic.sigar.ProcExe;
 
 /**
  * Display process file information.

@@ -16,13 +16,13 @@
 
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.SigarProxy;
-import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.SigarNotImplementedException;
-import org.hyperic.sigar.util.PrintfFormat;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import org.hyperic.sigar.SigarException;
+import org.hyperic.sigar.SigarNotImplementedException;
+import org.hyperic.sigar.SigarProxy;
+import org.hyperic.sigar.util.PrintfFormat;
 
 /**
  * Display how long the system has been running and the current load averages.

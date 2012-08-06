@@ -16,20 +16,20 @@
 
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarProxy;
-import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.ProcCredName;
-import org.hyperic.sigar.ProcMem;
-import org.hyperic.sigar.ProcTime;
-import org.hyperic.sigar.ProcState;
-import org.hyperic.sigar.ProcUtil;
-
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
+import org.hyperic.sigar.ProcCredName;
+import org.hyperic.sigar.ProcMem;
+import org.hyperic.sigar.ProcState;
+import org.hyperic.sigar.ProcTime;
+import org.hyperic.sigar.ProcUtil;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
+import org.hyperic.sigar.SigarProxy;
 
 /**
  * Show process status.

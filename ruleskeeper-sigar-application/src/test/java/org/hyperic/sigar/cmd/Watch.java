@@ -21,13 +21,13 @@ import java.io.FileFilter;
 import java.io.IOException;
 import java.util.Date;
 
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.DirStat;
 import org.hyperic.sigar.FileInfo;
 import org.hyperic.sigar.FileWatcher;
 import org.hyperic.sigar.FileWatcherThread;
 import org.hyperic.sigar.ProcFileMirror;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
 
 /**
  * Watch a file or directory displaying attribute changes.

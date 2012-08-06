@@ -16,8 +16,8 @@
 
 package org.hyperic.sigar.cmd;
 
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.hyperic.sigar.SigarException;
 

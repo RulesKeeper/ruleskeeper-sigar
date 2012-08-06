@@ -16,8 +16,8 @@
 
 package org.hyperic.sigar.cmd;
 
-import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.CpuTimer;
+import org.hyperic.sigar.SigarException;
 
 public class Time extends SigarCommandBase {
 
