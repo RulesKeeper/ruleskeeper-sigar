@@ -39,6 +39,7 @@ public class SigarConfigurationRefreshJob implements Job {
 
 	private static final String DEFAULT_REFRESH_CRON_EXPRESSION = "0 0/1 * * * ?";
 	public static final String DEFAULT_SERVER_URL = "http://127.0.0.1:9000";
+	private static final String DEFAULT_SENDING_ACTIVE = "Y";
 
 	private static final String DEFAULT_CPU_WARN_THRESHOLD = "80";
 	private static final String DEFAULT_CPU_ERROR_THRESHOLD = "90";
@@ -70,6 +71,9 @@ public class SigarConfigurationRefreshJob implements Job {
 
 			String refreshCronExpression = configuration.getProperty("ruleskeeper.sigar.refresh.cron", DEFAULT_REFRESH_CRON_EXPRESSION);
 			String serverUrl = configuration.getProperty("ruleskeeper.server.url", DEFAULT_SERVER_URL);
+
+			String sendingActive = configuration.getProperty("ruleskeeper.sigar.sending.active", DEFAULT_SENDING_ACTIVE);
+
 			String defaultWarnThresholdCPU = configuration.getProperty("ruleskeeper.sigar.cpu.defaultWarnThreshold", DEFAULT_CPU_WARN_THRESHOLD);
 			String defaultErrorThresholdCPU = configuration.getProperty("ruleskeeper.sigar.cpu.defaultErrorThreshold", DEFAULT_CPU_ERROR_THRESHOLD);
 			String defaultWarnThresholdMemory = configuration.getProperty("ruleskeeper.sigar.memory.defaultWarnThreshold", DEFAULT_MEMORY_WARN_THRESHOLD);
@@ -83,6 +87,11 @@ public class SigarConfigurationRefreshJob implements Job {
 
 			RulesKeeperSigarScheduler.INSTANCE.setRefreshCronExpression(refreshCronExpression);
 			RulesKeeperSigarScheduler.INSTANCE.setServerUrl(serverUrl);
+			if ("Y".equalsIgnoreCase(sendingActive)) {
+				RulesKeeperSigarScheduler.INSTANCE.setSendingActive(Boolean.TRUE);
+			} else {
+				RulesKeeperSigarScheduler.INSTANCE.setSendingActive(Boolean.FALSE);
+			}
 			RulesKeeperSigarScheduler.INSTANCE.setDefaultWarnThresholdCPU(defaultWarnThresholdCPU);
 			RulesKeeperSigarScheduler.INSTANCE.setDefaultErrorThresholdCPU(defaultErrorThresholdCPU);
 			RulesKeeperSigarScheduler.INSTANCE.setDefaultWarnThresholdMemory(defaultWarnThresholdMemory);

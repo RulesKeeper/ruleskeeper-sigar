@@ -49,6 +49,7 @@ public enum RulesKeeperSigarScheduler {
 
 	private String refreshCronExpression = null;
 	private String serverUrl = null;
+	private Boolean sendingActive = Boolean.TRUE;
 
 	private String defaultWarnThresholdCPU = null;
 	private String defaultErrorThresholdCPU = null;
@@ -260,6 +261,14 @@ public enum RulesKeeperSigarScheduler {
 
 	public void setGatheringFileSystemActive(Boolean gatheringFileSystemActive) {
 		this.gatheringFileSystemActive = gatheringFileSystemActive;
+	}
+
+	public Boolean getSendingActive() {
+		return sendingActive;
+	}
+
+	public void setSendingActive(Boolean sendingActive) {
+		this.sendingActive = sendingActive;
 	}
 
 }

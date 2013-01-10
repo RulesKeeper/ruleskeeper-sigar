@@ -88,12 +88,14 @@ public abstract class AbstractDataSender {
 	}
 
 	public void send(Metric m, String serverUrl) throws IOException, InterruptedException, IllegalArgumentException, ExecutionException {
-		if (RulesKeeperSigarScheduler.INSTANCE.getWaitTimeForServerAvailability() > 0) {
-			LOGGER.info("RulesKeeper Server not available, waiting " + RulesKeeperSigarScheduler.INSTANCE.getWaitTimeForServerAvailability()
-			    / RulesKeeperSigarConstants.MS_TO_SECOND_MULTIPLE + " seconds, before trying to send data.");
-			Thread.sleep(RulesKeeperSigarScheduler.INSTANCE.getWaitTimeForServerAvailability());
+		if (RulesKeeperSigarScheduler.INSTANCE.getSendingActive()) {
+			if (RulesKeeperSigarScheduler.INSTANCE.getWaitTimeForServerAvailability() > 0) {
+				LOGGER.info("RulesKeeper Server not available, waiting " + RulesKeeperSigarScheduler.INSTANCE.getWaitTimeForServerAvailability()
+				    / RulesKeeperSigarConstants.MS_TO_SECOND_MULTIPLE + " seconds, before trying to send data.");
+				Thread.sleep(RulesKeeperSigarScheduler.INSTANCE.getWaitTimeForServerAvailability());
+			}
+			sendMetricToServer(m, serverUrl, httpHandler);
 		}
-		sendMetricToServer(m, serverUrl, httpHandler);
 	}
 
 	public void sendMetricToServer(Metric m, String serverUrl, AsyncCompletionHandler<Response> handler) throws IllegalArgumentException, IOException, InterruptedException,

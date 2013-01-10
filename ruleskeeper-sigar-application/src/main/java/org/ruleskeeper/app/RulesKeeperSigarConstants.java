@@ -22,7 +22,6 @@ package org.ruleskeeper.app;
 public final class RulesKeeperSigarConstants {
 
 	private RulesKeeperSigarConstants() {
-
 	}
 
 	public static final int MS_TO_SECOND_MULTIPLE = 1000;
