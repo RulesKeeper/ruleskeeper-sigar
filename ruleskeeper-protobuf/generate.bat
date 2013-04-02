@@ -1,0 +1,1 @@
+mvn -f pom-compile.xml compile
