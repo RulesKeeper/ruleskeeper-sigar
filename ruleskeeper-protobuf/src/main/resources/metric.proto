@@ -28,7 +28,7 @@ message Metric {
   }
 
   required UnitType unit = 8 [default = STRING];
-	optional string defaultWarningThreshold = 9;
+  optional string defaultWarningThreshold = 9;
   optional string defaultErrorThreshold = 10;
 
 }
