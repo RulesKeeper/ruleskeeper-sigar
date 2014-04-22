@@ -1,1 +1,2 @@
-a standalone app publishing system information provided by SIGAR to a RulesKeeper Server URL
+RulesKeeper SIGAR aim is to collect system metrics provided by the award winning SIGAR and to publish them to a RulesKeeper Server URL.
+This standalone application will have to be installed on each server you would like to monitor and will need a running RulesKeeper Server.
